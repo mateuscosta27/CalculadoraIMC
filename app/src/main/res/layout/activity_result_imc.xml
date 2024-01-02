@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+
+        tools:context=".MainActivity">
+
+    <TextView
+            android:id="@+id/textResultTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="@string/titleResult"
+            style="@style/TextViewTitleTheme"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+            android:id="@+id/textLabelWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            style="@style/TextViewLabelTheme"
+            android:text="@string/yourImc"
+            app:layout_constraintTop_toBottomOf="@+id/textResultTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+            android:id="@+id/textSubTitleResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            style="@style/TextViewLabelTheme"
+            tools:text="25.7/m²"
+            android:textColor="@color/colorButtons"
+            android:textSize="30sp"
+            app:layout_constraintTop_toBottomOf="@+id/textLabelWeight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+            android:id="@+id/textCategoryImc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            tools:text="@string/underWeightCategory"
+            style="@style/TextViewLabelTheme"
+            app:layout_constraintTop_toBottomOf="@id/textSubTitleResult"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+            android:id="@+id/textShowResult"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"
+            tools:text="@string/idealWeight"
+            style="@style/TextViewLabelTheme"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/textCategoryImc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/buttonFinish"
+            app:layout_constraintStart_toStartOf="parent"/>
+    <Button
+            android:id="@+id/buttonFinish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="25dp"
+            android:padding="20dp"
+            style="@style/TextViewLabelTheme"
+            android:text="@string/finish"
+            android:background="@drawable/bg_button"
+            app:backgroundTint="@null"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

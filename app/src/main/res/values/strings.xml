@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">firstApp</string>
+    <string name="titleApplication">Calcule seu IMC</string>
+    <string name="titleResult">Resultado</string>
+    <string name="inputYourWeight">Seu peso atual ou aproximado</string>
+    <string name="inputYourHeight">Sua altura atual ou aproximada</string>
+    <string name="calculate">Calcular IMC</string>
+    <string name="warningFields">Preencha os campos com valores válidos.</string>
+
+    <!-- Categorias de do IMC -->
+    <string name="underWeightCategory">MAGREZA</string>
+    <string name="idealWeightCategory">Normal</string>
+    <string name="overWeightCategory">Sobrepeso</string>
+    <string name="firstDegreeObesityCaterogy">Obesidade Grau I</string>
+    <string name="secondDegreeObesityCategory">Obesidade Grau II</string>
+    <string name="thirdDegreeObesityCategory">Obesidade Grau III</string>
+
+
+    <!-- Descrições das categorias de do IMC -->
+
+    <string name="underWeight">Seu IMC indica que você esta Abaixo do peso(MAGREZA). É recomendado procurar um médico
+        para avaliação criteriosa do resultado.
+        Pode indicar um estado de consumo do organismo, com poucas reservas e riscos associados.
+    </string>
+
+    <string name="idealWeight">Seu IMC indica que você esta no Peso Ideal. Tudo indica que está tudo bem, mas é
+        importante avaliar outros parâmetros da composição corporal, para compreender se estão dentro do recomendado.
+        Algumas pessoas apresentam IMC dentro da normalidade, mas têm circunferência abdominal maior que a recomendada
+        e/ou quantidade de massa gorda acima do ideal.
+    </string>
+
+    <string name="overweight">Seu IMC indiqca que você esta um pouco acima do peso ideal(SOBREPESO). O sobrepeso está
+        associado ao risco de doenças como diabetes e hipertensão.
+        Então, atenção! Consulte um médico e reveja hábitos para reverter o quadro. Também é importante avaliar outros
+        parâmetros, como a circunferência abdominal.
+    </string>
+    <string name="firstDegreeObesity">Seu IMC indica que você esta acima do peso ideal(OBESIDADE GRAU 1). É importante
+        buscar orientação médica e nutricional para entender melhor o seu caso,
+        mesmo que os exames (colesterol e glicemia, por exemplo) estejam normais.
+    </string>
+    <string name="secondDegreeObesity">Seu IMC indica que você esta muito acima do peso ideal(OBESIDADE GRAU 2). Indica
+        um
+        quadro de obesidade mais evoluído em relação à classificação anterior e,
+        mesmo com exames laboratoriais dentro da normalidade, não se deve atrasar a busca por orientação médica e
+        nutricional.
+
+    </string>
+    <string name="thirdDegreeObesity">Seu IMC indica que você esta sofrendo da chamada Obesidade Mórbida (OBESIDADE GRAU
+        3). Nesse ponto, a chance de já estarmos diante de outras doenças associadas é mais elevada.
+        É fundamental buscar orientação médica.
+    </string>
+    <string name="notFoundIMC">Parametro fora da faixa de cálculo</string>
+    <string name="yourImc">Seu IMC</string>
+    <string name="finish">Finalizar</string>
+
+
+</resources>

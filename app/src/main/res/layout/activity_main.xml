@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:orientation="vertical"
+        android:fillViewport="true"
+        tools:context=".MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+                                                       android:layout_height="match_parent">
+
+
+        <TextView
+                android:id="@+id/textResultTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="@string/titleApplication"
+                style="@style/TextViewTitleTheme"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+                android:id="@+id/textLabelWeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                style="@style/TextViewLabelTheme"
+                android:text="@string/inputYourWeight"
+                app:layout_constraintTop_toBottomOf="@+id/textResultTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+        />
+        <EditText
+                android:id="@+id/textInputWeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:hint="Seu Peso (Kg)"
+                android:textAlignment="center"
+                android:background="@drawable/bg_edit_text"
+                android:textColorHint="@color/colorButtons"
+                android:textStyle="bold"
+                android:inputType="numberDecimal"
+                app:backgroundTint="@null"
+                android:textColor="@color/colorButtons"
+                app:layout_constraintTop_toBottomOf="@+id/textLabelWeight"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+
+        <TextView
+                android:id="@+id/textLabelHeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                style="@style/TextViewLabelTheme"
+                android:text="@string/inputYourHeight"
+                app:layout_constraintTop_toBottomOf="@+id/textInputWeight"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <EditText
+                android:id="@+id/textInputHeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:hint="Sua altura (cm)"
+                android:textColor="@color/colorButtons"
+                android:textAlignment="center"
+                android:background="@drawable/bg_edit_text"
+                android:textColorHint="@color/colorButtons"
+                android:textStyle="bold"
+                android:inputType="number"
+                android:maxLength="4"
+                app:backgroundTint="@null"
+                app:layout_constraintTop_toBottomOf="@+id/textLabelHeight"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        <Button
+                android:id="@+id/buttonCalculateImc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:padding="20dp"
+                style="@style/TextViewLabelTheme"
+                android:text="@string/calculate"
+                android:background="@drawable/bg_button"
+                app:backgroundTint="@null"
+                app:layout_constraintTop_toBottomOf="@+id/textInputHeight"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
