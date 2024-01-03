@@ -1,12 +1,12 @@
-package com.example.firstapp
+package com.example.CalculadoraImc
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
-import com.example.firstapp.databinding.ActivityMainBinding
-import com.example.firstapp.viewModel.MainViewModel
+import com.example.CalculadoraImc.databinding.ActivityMainBinding
+import com.example.CalculadoraImc.viewModel.MainViewModel
 
 
 class MainActivity : AppCompatActivity() {

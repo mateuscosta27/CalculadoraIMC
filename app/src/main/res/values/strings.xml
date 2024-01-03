@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">firstApp</string>
+    <string name="app_name">CalculadoraIMC</string>
     <string name="titleApplication">Calcule seu IMC</string>
     <string name="titleResult">Resultado</string>
     <string name="inputYourWeight">Seu peso atual ou aproximado</string>

@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.FirstApp" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.CalculadoraIMC" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
         <item name="android:windowBackground">@color/colorDefault</item>
@@ -8,7 +8,7 @@
 
     </style>
 
-    <style name="Theme.FirstApp" parent="Base.Theme.FirstApp"/>
+    <style name="Theme.CalculadoraIMC" parent="Base.Theme.CalculadoraIMC"/>
 
     <style name="TextViewTitleTheme" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="android:fontFamily">@font/days_one</item>

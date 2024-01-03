@@ -1,9 +1,9 @@
-package com.example.firstapp
+package com.example.CalculadoraImc
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.firstapp.databinding.ActivityResultImcBinding
+import com.example.CalculadoraImc.databinding.ActivityResultImcBinding
 
 class ResultImcActivity : AppCompatActivity() {
     private lateinit var binding: ActivityResultImcBinding
@@ -20,7 +20,7 @@ class ResultImcActivity : AppCompatActivity() {
         val intent: Intent = getIntent()
         val imc = intent.getDoubleExtra("imcResult", 0.0)
         SetText(imc)
-        val imcFormatted = String.format("%.2f",imc)
+        val imcFormatted = String.format("%.2f", imc)
 
         binding.textSubTitleResult.text = "$imcFormatted Kg/m²"
     }
@@ -28,14 +28,17 @@ class ResultImcActivity : AppCompatActivity() {
     private fun SetText(imc: Double) {
         val categoryImc = binding.textCategoryImc
 
-         when {
+        when {
             imc < 18.5 -> {
-               categoryImc.text =  getString(R.string.underWeightCategory)
+                categoryImc.text = getString(R.string.underWeightCategory)
                 categoryImc.setTextColor(getColor(R.color.colorUnderWeight))
             }
+
             imc in 18.51..24.9 -> {
-                categoryImc.text =  getString(R.string.idealWeight)
+                categoryImc.text = getString(R.string.idealWeight)
+
             }
+
             imc in 25.0..29.9 -> println("SobrePeso")
             imc in 30.0..34.9 -> println("Obesidade Grau I")
             imc in 35.0..39.9 -> println("Obesidade Grau II")
@@ -46,7 +49,6 @@ class ResultImcActivity : AppCompatActivity() {
         }
 
     }
-
 
 
     private fun category() {

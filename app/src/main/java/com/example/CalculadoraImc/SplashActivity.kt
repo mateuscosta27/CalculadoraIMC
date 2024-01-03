@@ -1,4 +1,4 @@
-package com.example.firstapp
+package com.example.CalculadoraImc
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
