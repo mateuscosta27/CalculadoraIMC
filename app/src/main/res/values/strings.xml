@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CalculadoraIMC</string>
+    <string name="app_name">IMCEasy</string>
     <string name="titleApplication">Calcule seu IMC</string>
     <string name="titleResult">Resultado</string>
     <string name="inputYourWeight">Seu peso atual ou aproximado</string>
@@ -51,7 +51,8 @@
     </string>
     <string name="notFoundIMC">Parametro fora da faixa de cálculo</string>
     <string name="yourImc">Seu IMC</string>
-    <string name="finish">Finalizar</string>
+    <string name="recalculate">Recalcular</string>
+    <string name="finishApp">Fechar</string>
 
 
 </resources>

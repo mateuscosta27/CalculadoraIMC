@@ -4,7 +4,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="5dp"
+        android:layout_margin="10dp"
 
         tools:context=".MainActivity">
 
@@ -37,7 +37,7 @@
             android:layout_marginTop="20dp"
             style="@style/TextViewLabelTheme"
             tools:text="25.7/m²"
-            android:textColor="@color/colorButtons"
+            android:textColor="@color/colorSecondaryDefault"
             android:textSize="30sp"
             app:layout_constraintTop_toBottomOf="@+id/textLabelWeight"
             app:layout_constraintEnd_toEndOf="parent"
@@ -53,33 +53,51 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
     <TextView
-            android:id="@+id/textShowResult"
+            android:id="@+id/textResultDescription"
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
-            android:layout_marginBottom="25dp"
             tools:text="@string/idealWeight"
             style="@style/TextViewLabelTheme"
             android:textSize="16sp"
+            android:textColor="@color/colorSecondaryDefault"
             app:layout_constraintTop_toBottomOf="@id/textCategoryImc"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/buttonFinish"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
     <Button
-            android:id="@+id/buttonFinish"
+            android:id="@+id/buttonRecalculate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
             android:layout_marginStart="15dp"
             android:layout_marginEnd="15dp"
-            android:layout_marginBottom="25dp"
             android:padding="20dp"
             style="@style/TextViewLabelTheme"
-            android:text="@string/finish"
+            android:text="@string/recalculate"
             android:background="@drawable/bg_button"
             app:backgroundTint="@null"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintTop_toBottomOf="@+id/textResultDescription"/>
+    <Button
+            android:id="@+id/buttonFinishApp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:padding="20dp"
+            style="@style/TextViewLabelTheme"
+            android:text="@string/finishApp"
+            android:background="@drawable/bg_button"
+            app:backgroundTint="@null"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonRecalculate"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

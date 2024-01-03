@@ -3,10 +3,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="colorDefault">#34085E</color>
-    <color name="colorButtons">#FF9300</color>
+    <color name="colorSecondaryDefault">#FF9300</color>
 
 
-    <color name="colorBackgroundDefault">#2A3340</color>
     <color name="colorUnderWeight">#176A57</color>
     <color name="colorIdealWeight">#3399FE</color>
     <color name="colorOverWeight">#6500CB</color>
