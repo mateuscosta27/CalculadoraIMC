@@ -3,7 +3,11 @@ package com.example.CalculadoraImc
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.widget.Toast
+import androidx.core.widget.addTextChangedListener
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.CalculadoraImc.databinding.ActivityMainBinding
 import com.example.CalculadoraImc.viewModel.MainViewModel
@@ -24,6 +28,34 @@ class MainActivity : AppCompatActivity() {
          */
 
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+
+        /**
+         * Criação do meu observador dos valores do slider para atualização dos valores do editText
+         */
+        viewModel.valueSlider.observe(this, Observer {
+            newValue ->
+            binding.textInputHeight.setText(newValue.toString())
+        })
+
+        binding.textInputHeight.addTextChangedListener { object:TextWatcher{
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+               viewModel.updateValueEditText(s.toString())
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                TODO("Not yet implemented")
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+                TODO("Not yet implemented")
+            }
+        } }
+
+        binding.sliderWeight.addOnChangeListener { slider,value, fromUser ->
+            viewModel.updateValueSlider(value)
+        }
+
+
         binding.buttonCalculateImc.setOnClickListener {
             validateFields()
         }
