@@ -3,7 +3,7 @@
     <style name="Base.Theme.CalculadoraIMC" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-        <item name="android:windowBackground">@color/colorDefault</item>
+        <item name="android:windowBackground">@color/colorBackground</item>
         <item name="android:windowFullscreen">true</item>
 
     </style>
@@ -24,6 +24,17 @@
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">18sp</item>
         <item name="android:textAlignment">center</item>
+
+    </style>
+
+    <style name="ButtonTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:padding">20dp</item>
+        <item name="android:background">@drawable/bg_button</item>
+        <item name="android:fontFamily">@font/days_one</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAlignment">center</item>
+
 
     </style>
 

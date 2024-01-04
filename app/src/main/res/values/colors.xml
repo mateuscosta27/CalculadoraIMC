@@ -2,8 +2,12 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="colorDefault">#34085E</color>
-    <color name="colorSecondaryDefault">#FF9300</color>
+    <color name="colorDefault">#0B0E20</color>
+    <color name="colorBackground">#0B0E20</color>
+    <color name="colorBackgroundComponent">#1D1E31</color>
+    <color name="colorButton">#EB1555</color>
+    <color name="colorSecondaryDefault">#333232</color>
+
 
 
     <color name="colorUnderWeight">#176A57</color>

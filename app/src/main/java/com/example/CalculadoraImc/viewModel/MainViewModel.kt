@@ -6,6 +6,7 @@ class MainViewModel : ViewModel() {
 
     private var weight:Double = 0.0
     private var height:Double = 0.0
+    private var valueSlider = 0
 
 
     fun setWeight(value:Double){
@@ -22,6 +23,10 @@ class MainViewModel : ViewModel() {
 
     fun calculateImc():Double{
         return weight/(height * height)
+    }
+
+    fun valueSlider(){
+
     }
 
 

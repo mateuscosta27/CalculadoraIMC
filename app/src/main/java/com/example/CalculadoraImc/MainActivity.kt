@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import com.example.CalculadoraImc.databinding.ActivityMainBinding
 import com.example.CalculadoraImc.viewModel.MainViewModel
+import com.google.android.material.slider.Slider
 
 
 class MainActivity : AppCompatActivity() {
@@ -23,7 +24,6 @@ class MainActivity : AppCompatActivity() {
          */
 
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
-
         binding.buttonCalculateImc.setOnClickListener {
             validateFields()
         }
