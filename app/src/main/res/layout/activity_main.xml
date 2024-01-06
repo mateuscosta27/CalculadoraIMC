@@ -4,19 +4,19 @@
         xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="10dp"
+        android:layout_margin="8dp"
         android:orientation="vertical"
         android:fillViewport="true"
         tools:context=".MainActivity">
-    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
-                                                       android:layout_height="match_parent">
-
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
         <TextView
                 android:id="@+id/textResultTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="50dp"
                 android:text="@string/titleApplication"
                 style="@style/TextViewTitleTheme"
                 app:layout_constraintTop_toTopOf="parent"
@@ -27,90 +27,115 @@
                 android:id="@+id/textLabelWeight"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="100dp"
+                android:layout_marginTop="40dp"
                 style="@style/TextViewLabelTheme"
                 android:text="@string/inputYourWeight"
                 app:layout_constraintTop_toBottomOf="@+id/textResultTitle"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-        />
-        <EditText
-                android:id="@+id/textInputWeight"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        <LinearLayout
+                android:id="@+id/linearContainerWeight"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
-                android:paddingTop="15dp"
-                android:paddingBottom="15dp"
-                android:hint="Seu Peso (Kg)"
-                android:textAlignment="center"
-                android:background="@drawable/bg_edit_text"
-                android:textColorHint="@color/colorSecondaryDefault"
-                android:textStyle="bold"
-                android:inputType="numberDecimal"
-                app:backgroundTint="@null"
-                android:textColor="@color/colorSecondaryDefault"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
                 app:layout_constraintTop_toBottomOf="@+id/textLabelWeight"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
-        <com.google.android.material.slider.Slider
-                android:id="@+id/sliderWeight"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:valueFrom="100"
-                android:valueTo="300"
-                android:stepSize="10"
-                app:trackHeight="20dp"
-                app:thumbRadius="18dp"
-                app:trackColorActive="@color/colorButton"
-                app:layout_constraintTop_toBottomOf="@+id/textInputHeight"
-               />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageButton
+                    android:id="@+id/buttonDecrement"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/bg_image_button"
+                    android:src="@drawable/ic_decrement"/>
+            <EditText
+                    android:id="@+id/textInputWeight"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:layout_weight="0.5"
+                    android:textAlignment="center"
+                    android:textColor="@color/dark_grey"
+                    android:textStyle="bold"
+                    android:background="@drawable/bg_edit_text"
+                    app:backgroundTint="@null"
+                    android:inputType="numberDecimal"
+                    app:layout_constraintTop_toBottomOf="@+id/textLabelWeight"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+            <ImageButton
+                    android:id="@+id/buttonIncrement"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/bg_image_button"
+                    android:src="@drawable/ic_increment"/>
+        </LinearLayout>
 
 
         <TextView
                 android:id="@+id/textLabelHeight"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="25dp"
                 style="@style/TextViewLabelTheme"
                 android:text="@string/inputYourHeight"
-                app:layout_constraintTop_toBottomOf="@+id/textInputWeight"
+                app:layout_constraintTop_toBottomOf="@+id/linearContainerWeight"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"/>
-
-
         <EditText
                 android:id="@+id/textInputHeight"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginStart="65dp"
+                android:layout_marginEnd="65dp"
                 android:paddingTop="15dp"
                 android:paddingBottom="15dp"
-                android:hint="Sua altura (cm)"
-                android:textColor="@color/colorSecondaryDefault"
+                android:textColor="@color/dark_grey"
                 android:textAlignment="center"
                 android:background="@drawable/bg_edit_text"
-                android:textColorHint="@color/colorSecondaryDefault"
+                android:textColorHint="@color/dark_grey"
                 android:textStyle="bold"
                 android:inputType="number"
                 android:maxLength="4"
                 app:backgroundTint="@null"
                 app:layout_constraintTop_toBottomOf="@+id/textLabelHeight"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" android:layout_marginBottom="1dp"
-                app:layout_constraintBottom_toTopOf="@+id/sliderWeight"/>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
 
+
+        <com.google.android.material.slider.Slider
+                android:id="@+id/sliderWeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="15dp"
+                android:valueFrom="100"
+                android:valueTo="300"
+                android:stepSize="10"
+                app:trackHeight="10dp"
+                app:thumbRadius="18dp"
+                app:thumbColor="@color/light_blue"
+                app:trackColorActive="@color/light_blue"
+                app:trackColorInactive="@color/light_aqua"
+                app:layout_constraintTop_toBottomOf="@+id/textInputHeight"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
         <Button
                 android:id="@+id/buttonCalculateImc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"
+                android:layout_marginBottom="20dp"
                 android:padding="20dp"
                 style="@style/TextViewLabelTheme"
                 android:text="@string/calculate"
@@ -118,7 +143,8 @@
                 app:backgroundTint="@null"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/sliderWeight"/>
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
