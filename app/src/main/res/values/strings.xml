@@ -2,8 +2,8 @@
     <string name="app_name">IMCEasy</string>
     <string name="titleApplication">Calcule seu IMC</string>
     <string name="titleResult">Resultado</string>
-    <string name="inputYourWeight">Seu peso atual ou aproximado</string>
-    <string name="inputYourHeight">Sua altura atual ou aproximada</string>
+    <string name="inputYourWeight">Seu peso atual</string>
+    <string name="inputYourHeight">Sua altura atual</string>
     <string name="calculate">Calcular IMC</string>
     <string name="warningFields">Preencha os campos com valores válidos.</string>
 

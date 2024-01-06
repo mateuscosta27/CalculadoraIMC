@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="10dp"
-
         tools:context=".MainActivity">
 
     <TextView
@@ -37,7 +37,7 @@
             android:layout_marginTop="20dp"
             style="@style/TextViewLabelTheme"
             tools:text="25.7/m²"
-            android:textColor="@color/white"
+            android:textColor="@color/light_blue"
             android:textSize="30sp"
             app:layout_constraintTop_toBottomOf="@+id/textLabelWeight"
             app:layout_constraintEnd_toEndOf="parent"
@@ -56,7 +56,7 @@
             android:id="@+id/textResultDescription"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:padding="15dp"
@@ -67,8 +67,7 @@
             android:textColor="@color/white"
             app:layout_constraintTop_toBottomOf="@id/textCategoryImc"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/buttonRecalculate"/>
+            app:layout_constraintEnd_toEndOf="parent"/>
     <Button
             android:id="@+id/buttonRecalculate"
             android:layout_width="match_parent"
@@ -91,7 +90,8 @@
             android:layout_marginEnd="15dp"
             android:layout_marginBottom="20dp"
             android:text="@string/finishApp"
-            app:backgroundTint="@null"
+            android:textColor="@color/dark_grey"
+            app:backgroundTint="@color/light_red"
             style="@style/ButtonTheme"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"

@@ -2,19 +2,17 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="colorDefault">#0B0E20</color>
-    <color name="colorBackground">#0B0E20</color>
-    <color name="colorBackgroundComponent">#1D1E31</color>
-    <color name="colorButton">#EB1555</color>
-    <color name="colorSecondaryDefault">#333232</color>
+    <color name="dark_grey">#2C3333</color>
+    <color name="blue_green">#395B64</color>
+    <color name="light_blue">#A5C9CA</color>
+    <color name="light_aqua">#E7F6F2</color>
+    <color name="light_red">#FF7D7D</color>
+    <color name="coral_red">#FF6464</color>
 
 
 
-    <color name="colorUnderWeight">#176A57</color>
-    <color name="colorIdealWeight">#3399FE</color>
-    <color name="colorOverWeight">#6500CB</color>
-    <color name="colorObesity">#FECB00</color>
-    <color name="colorSuperObesity">#A50020</color>
+
+
 
 
 </resources>
