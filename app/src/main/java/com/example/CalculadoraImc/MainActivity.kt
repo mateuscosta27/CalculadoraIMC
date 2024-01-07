@@ -1,17 +1,16 @@
 package com.example.CalculadoraImc
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.CalculadoraImc.databinding.ActivityMainBinding
 import com.example.CalculadoraImc.viewModel.MainViewModel
-import com.google.android.material.slider.Slider
 
 
 class MainActivity : AppCompatActivity() {
@@ -21,6 +20,22 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
+        binding.sliderWeight.addOnChangeListener { slider,value, fromUser ->
+            viewModel.updateValueSlider(value.toDouble())
+        }
+
+
+        binding.buttonCalculateImc.setOnClickListener {
+            validateFields()
+        }
+
+        binding.buttonIncrement.setOnClickListener{
+            viewModel.increment()
+        }
+
+
         /**
          * ViewModelProvider -> classe fornecida pelo Android Jetpack, ela ajuda a obter instancia da ViewModel ela recebe o parametro this
          * this -> representa a instancia da Activity e é usado como parte do escopo da vida util da viewModel
@@ -37,9 +52,17 @@ class MainActivity : AppCompatActivity() {
             binding.textInputHeight.setText(newValue.toString())
         })
 
+        viewModel.textInputWeight.observe(this,Observer{
+            newValue ->
+            binding.textInputWeight.setText(newValue.toString())
+        })
+
+
+
+
         binding.textInputHeight.addTextChangedListener { object:TextWatcher{
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-               viewModel.updateValueEditText(s.toString())
+               viewModel.updateValueInputHeight(s.toString())
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
@@ -51,14 +74,24 @@ class MainActivity : AppCompatActivity() {
             }
         } }
 
-        binding.sliderWeight.addOnChangeListener { slider,value, fromUser ->
-            viewModel.updateValueSlider(value)
-        }
 
 
-        binding.buttonCalculateImc.setOnClickListener {
-            validateFields()
-        }
+        binding.textLabelWeight.addTextChangedListener { object: TextWatcher{
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+                viewModel.textInputWeight
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                TODO("Not yet implemented")
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+             binding.textInputWeight.setText(s.toString())
+            }
+
+        } }
+
+
     }
 
     /**
